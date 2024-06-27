@@ -6,13 +6,26 @@ Folder Structure Conventions
 ### A typical top-level directory layout
 
     .
-    ├── build                   # Compiled files (alternatively `dist`)
-    ├── docs                    # Documentation files (alternatively `doc`)
-    ├── src                     # Source files (alternatively `lib` or `app`)
-    ├── test                    # Automated tests (alternatively `spec` or `tests`)
-    ├── tools                   # Tools and utilities
-    ├── LICENSE
+    ├── _bat                  # bash files
+    ├── Lib                   # Related library DLL files 
+    ├── Docs                   # Related library DLL files 
+    ├── Assets                # GUI static components like images and fonts
+    ├── Data Input            # Any input which is used by program (JSON files, templates exc.)
+    ├── Data Output           # Any program outputs which are result image and result values exc.
+    ├── Opticon.BL            # Business Layer of project
+    ├── Opticon.DAL           # Data Access Layer of project
+    ├── Opticon.UI            # Presentation Layer of project
+    └── Opticon.sln           # Visual Studio solution file of project
     └── README.md
+
+
+### Installation
+Add your personal access token to line 5 of authorize.bat file. 
+If you directly run .exe, run `_bat/StartOpticon.bat`
+If you want to do development & debug:
+`cd Path_of_Project/_bat`
+`./SetVisionDrive.bat`
+Now project was created on V virtual disk.  
 
 > Use short lowercase names at least for the top-level files and folders except
 > `LICENSE`, `README.md`
